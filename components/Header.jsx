@@ -6,8 +6,8 @@ import { useState } from "react";
 
 export const MENU_LIST = [
   { text: "Features", href: "/features" },
-  { text: "Download", href: "/download" },
-  { text: "FAQ", href: "/faq" },
+  { text: "Pricing", href: "/pricing" },
+  { text: "Contact", href: "/contact" },
 ];
 
 //--------------------
@@ -19,9 +19,9 @@ const Header = () => {
   }
 
   return (
-    <nav className="relative w-full px-20 py-6 mx-auto">
+    <nav className="relative w-full lg:px-[175px] py-6 mx-auto">
       <div className="flex items-center justify-between w-full my-6">
-        <div className="hidden md:block">
+        <div className="hidden w-[150px] md:block">
           <Image
             src="/logo-bookmark-reg.svg"
             width={200}
@@ -30,12 +30,12 @@ const Header = () => {
           />
         </div>
         {/* Menu md/lg */}
-        <div className="items-center hidden space-x-10 uppercase text-grayishBlue md:flex">
+        <div className="items-center hidden space-x-8 uppercase text-grayishBlue md:flex">
           {MENU_LIST.map((item, ind) => (
             <Link
               key={ind}
               href={item.href}
-              className="tracking-widest hover:text-softRed"
+              className="p-2 text-xs hover:text-softRed"
             >
               {item.text}
             </Link>
@@ -43,7 +43,7 @@ const Header = () => {
 
           <Link
             href="/login"
-            className="px-8 py-2 text-white border-2 rounded-lg shadow-md bg-softRed border-softRed hover:text-softRed hover:bg-white"
+            className="px-8 py-3 text-xs text-white border-2 rounded-md shadow-md bg-softRed border-softRed hover:text-softRed hover:bg-white"
           >
             Login
           </Link>

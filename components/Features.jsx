@@ -26,10 +26,10 @@ const Features = () => {
   const [tab, setTab] = useState(0);
 
   return (
-    <section className="w-full">
+    <section className="w-full mt-9">
       {/* header */}
       <div>
-        <div className="px-6 mx-auto mt-16">
+        <div className="px-6 mx-auto mt-[73px]">
           <h2 className="mb-6 text-4xl font-semibold text-center">Features</h2>
           <p className="max-w-lg mx-auto text-center text-grayishBlue">
             Our aim is to make it quick and easy for you to access your
@@ -39,12 +39,12 @@ const Features = () => {
         </div>
       </div>
       {/* Tabs */}
-      <div>
-        <div className="relative w-full px-6 mx-auto my-6 mt-12 mb-32 0">
+      <div className="w-full">
+        <div className="relative w-full px-6 mx-auto my-6 mt-12 mb-32">
           {/* blue ribon */}
-          <div className="hidden lg:block w-[1500px] h-[300px] right-[60%] absolute rounded-r-full top-52 bg-softBlue"></div>
+          <div className="hidden lg:block w-[1500px] h-[350px] right-[60%] absolute rounded-r-full top-52 bg-softBlue"></div>
 
-          <div className="flex flex-col justify-center w-3/4 mx-auto mb-6 border-b md:space-x-10 md:flex-row">
+          <div className="flex flex-col justify-center w-[60%] mx-auto mb-10 border-b md:space-x-10 md:flex-row">
             <div className="flex flex-col justify-center text-center text-gray-600 cursor-pointer hover:text-softRed md:w-1/3">
               <h2 onClick={() => setTab(0)} className="py-5">
                 Simple Bookmarking
@@ -97,19 +97,23 @@ export default Features;
 
 function ATab(index) {
   return (
-    <div key={index} className="flex flex-col py-5 md:flex-row md:space-x-7">
-      <div className="flex justify-center md:w-1/2">
+    <div
+      key={index}
+      className="flex flex-col w-full py-5 md:flex-row md:space-x-10"
+    >
+      <div className="flex justify-center md:w-1/2 lg:ml-9 lg:mr-28">
         <div
+          // The fisrt image is a little small than the other two
           className={`${
-            index === 0 ? "md:w-[520px] mb-3" : "md:w-[400px]"
+            index === 0 ? "md:w-[540px] mt-4 mb-3" : "md:w-[400px]"
           }  z-10`}
         >
           <Image src={TABS[index].img} alt="" width={750} height={450} />
         </div>
       </div>
 
-      <div className="flex flex-col space-y-8 md:w-1/2">
-        <h3 className="mt-32 text-3xl font-semibold text-center md:mt-0 md:text-left">
+      <div className="flex flex-col ml-12 space-y-7 md:w-1/2">
+        <h3 className="text-3xl font-semibold text-center lg:pt-20 md:mt-0 md:text-left">
           {TABS[index].title}
         </h3>
         <p className="max-w-md text-center text-grayishBlue md:text-left">
@@ -117,7 +121,7 @@ function ATab(index) {
         </p>
         <div className="mx-auto md:mx-0">
           <Link href="/moreInfo">
-            <p className="px-6 py-3 mt-4 font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-softBlue hover:border-softBlue hover:border-2">
+            <p className="px-6 py-3 mt-1 font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-softBlue hover:border-softBlue hover:border-2">
               More Info
             </p>
           </Link>

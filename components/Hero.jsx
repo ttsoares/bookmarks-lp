@@ -3,12 +3,12 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <section>
-      <div className="container flex flex-col-reverse mx-auto p-6 lg:flex-row lg:mb-0">
-        <div className="flex flex-col space-y-10 lg:mt-16 lg:w-1/2">
-          <h1 className="text-3xl font-semibold text-center lg:text-6xl lg:text-left">
+      <div className="container flex flex-col-reverse p-6 mx-auto lg:flex-row lg:mb-0">
+        <div className="flex flex-col space-y-8 lg:mt-28 lg:w-1/2 lg:ml-12">
+          <h1 className="text-2xl font-semibold text-center lg:text-5xl lg:text-left">
             A Simple Bookmark Manager
           </h1>
-          <p className="max-w-md mx-auto text-lg text-center text-gray-400 lg:text-2xl lg:text-left lg:mt-0 lg:mx-0">
+          <p className="max-w-md mx-auto text-lg text-center text-gray-400 lg:text-lg lg:text-left lg:mt-0 lg:mx-0">
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free.
@@ -17,13 +17,13 @@ const Hero = () => {
           <div className="flex items-center justify-center w-full space-x-4 lg:justify-start">
             <a
               href="#"
-              className="p-4 text-sm font-semibold text-white bg-softBlue rounded shadow-md border-2 border-softBlue md:text-base hover:bg-white hover:text-softBlue"
+              className="p-4 text-sm font-semibold text-white border-2 rounded shadow-md bg-softBlue border-softBlue md:text-xs hover:bg-white hover:text-softBlue"
             >
               Get It On Chrome
             </a>
             <a
               href="#"
-              className="p-4 text-sm font-semibold text-black bg-gray-300 rounded shadow-md border-2 border-gray-300 md:text-base hover:bg-white hover:text-gray-600"
+              className="p-4 text-sm font-semibold text-gray-500 bg-gray-200 border-2 border-gray-300 rounded shadow-md md:text-xs hover:bg-white hover:text-gray-400 hover:border-gray-800"
             >
               Get It On Firefox
             </a>
@@ -32,14 +32,17 @@ const Hero = () => {
 
         <div className="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
           {/* blue ribbon */}
-          <div className="hidden lg:block w-[1500px] h-[300px] left-[20%] absolute rounded-l-full top-52 bg-softBlue"></div>
-          <Image
-            src="/illustration-hero.svg"
-            alt=""
-            width={586}
-            height={385}
-            className="relative z-10 lg:top-24 xl:top-0 overflow-x-visible"
-          />
+          <div className="hidden lg:block w-[1500px] h-[300px] left-[38%] absolute rounded-l-full top-52 bg-softBlue"></div>
+
+          <div className="lg:w-[660px] mt-1">
+            <Image
+              src="/illustration-hero.svg"
+              alt=""
+              width={900}
+              height={597}
+              className="relative z-10 ml-2 overflow-x-visible lg:top-6 xl:top-0"
+            />
+          </div>
         </div>
       </div>
     </section>

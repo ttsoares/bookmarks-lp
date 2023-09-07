@@ -2,7 +2,7 @@ import "./globals.css";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import News from "@/components/news";
+import News from "@/components/News";
 
 import { Rubik } from "next/font/google";
 const rubik = Rubik({ subsets: ["latin"] });
