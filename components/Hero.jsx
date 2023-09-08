@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -15,14 +16,14 @@ const Hero = () => {
           </p>
 
           <div className="flex items-center justify-center w-full space-x-4 lg:justify-start">
-            <a
-              href="#"
+            <Link
+              href="https://chrome.google.com/webstore/detail/bookmark-managers/idfikogednmhonjfpfhnidolojlckgmd"
               className="p-4 text-sm font-semibold text-white border-2 rounded shadow-md bg-softBlue border-softBlue md:text-xs hover:bg-white hover:text-softBlue"
             >
               Get It On Chrome
-            </a>
+            </Link>
             <a
-              href="#"
+              href="https://addons.mozilla.org/en-US/firefox/addon/bookmarks-organizer/"
               className="p-4 text-sm font-semibold text-gray-500 border-2 border-gray-300 rounded shadow-md bg-slate-50 md:text-xs hover:bg-white hover:text-gray-400 hover:border-gray-800"
             >
               Get It On Firefox

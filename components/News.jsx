@@ -18,10 +18,10 @@ const News = () => {
   return (
     <section className="w-full pt-10 bg-softBlue lg:pb-14">
       <div className="max-w-lg mx-auto">
-        <p className="pt-8 mb-10 text-xs tracking-widest text-center text-white uppercase">
+        <p className="pt-8 mb-5 text-xs tracking-widest text-center text-white uppercase lg:mb-10">
           35,000+ Already Joined
         </p>
-        <h2 className="mb-6 text-2xl font-semibold text-center text-white px-7 md:text-3xl">
+        <h2 className="mb-6 text-2xl font-semibold text-center text-white lg:px-7 md:text-3xl">
           Stay up-to-date with what we&apos;re doing
         </h2>
 
@@ -32,31 +32,29 @@ const News = () => {
         >
           <div className="flex flex-col items-start justify-between mx-auto md:flex-row md:mx-0">
             <div
-              className={`h-20 relative ${
-                errors.email?.message
-                  ? "bg-softRed border-2 border-softRed rounded-md"
-                  : ""
+              className={`relative ${
+                errors.email?.message ? "bg-softRed rounded-md" : ""
               }`}
             >
               <input
                 {...register("email", {
+                  required: "First fill with a valid address...",
                   pattern: {
-                    value:
-                      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                    value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
                     message: "Whoops, make sure it's an email",
                   },
                 })}
-                type="text"
-                className="flex-1 px-6 pt-3 pb-2 mt-3 mb-4 border-white rounded-md border-1 focus:outline-none md:mb-0 w-72"
-                placeholder="Enter your email address"
+                type="email"
+                className="py-2 pt-4 pl-5 m-2 border-white rounded-md focus:outline-none w-72"
+                placeholder="&nbsp;&nbsp;&nbsp;Enter your email address"
               />
-              <p className="mt-2 ml-2 text-xs italic font-semibold text-white bg-softRed">
+              <p className="pl-6 mb-2 text-xs italic font-semibold text-white bg-softRed rounded-b-md">
                 {errors.email?.message}
               </p>
 
               {errors.email?.message && (
                 <svg
-                  className="absolute top-2.5 right-4"
+                  className="absolute top-6 right-4 animate-jump animate-infinite"
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
@@ -74,7 +72,10 @@ const News = () => {
 
             <input
               type="submit"
-              className="inline-flex px-6 py-3 mt-3 ml-6 text-sm font-semibold text-center text-white duration-200 transform rounded-md cursor-pointer focus:outline-none bg-softRed hover:bg-white hover:text-softRed"
+              className={
+                `inline-flex w-full px-6 py-3.5 mb-12 text-sm font-semibold text-center text-white duration-200 transform rounded-md cursor-pointer mt-3 md:mt-2 lg:ml-6 focus:outline-none bg-softRed hover:bg-white hover:text-softRed ` +
+                `${errors.email?.message ? "hover:border border-softRed" : ""}`
+              }
               value="Contact Us"
             />
           </div>

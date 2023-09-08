@@ -1,57 +1,55 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+
+import { MENU_LIST } from "./Header";
 
 const Footer = () => {
   return (
-    <footer className="w-full px-8 py-6 bg-veryDarkBlue">
-      <div className="flex flex-col items-center justify-between w-full px-32 mx-auto space-y-16 md:flex-row md:space-y-0">
-        <div className="flex flex-col items-center justify-between space-y-8 text-lg font-light md:flex-row md:space-y-0 md:space-x-14 text-grayishBlue">
-          <Image
-            src="/logo-bookmark-inv.svg"
-            alt=""
-            width={150}
-            height={80}
-            className=""
-          />
+    <footer className="w-full py-6 lg:px-8 bg-veryDarkBlue">
+      <div className="flex flex-col items-center justify-between w-full mx-auto space-y-10 md:px-32 md:flex-row md:space-y-0">
+        <div className="flex flex-col items-center justify-between text-lg font-light space-y-7 md:flex-row md:space-y-0 md:space-x-14 text-grayishBlue">
+          <Link href="/">
+            <Image
+              src="/logo-bookmark-inv.svg"
+              alt=""
+              width={150}
+              height={80}
+              className=""
+            />
+          </Link>
 
-          <a
-            href="#features"
-            className="text-sm text-gray-200 uppercase hover:text-softRed"
-          >
-            Features
-          </a>
-          <a
-            href="#download"
-            className="text-sm text-gray-200 uppercase hover:text-softRed"
-          >
-            Pricing
-          </a>
-          <a
-            href="#faq"
-            className="text-sm text-gray-200 uppercase hover:text-softRed"
-          >
-            Contact
-          </a>
+          {MENU_LIST.map((item, ind) => (
+            <Link
+              key={ind}
+              href={item.href}
+              className="text-xs text-gray-500 hover:text-softRed "
+            >
+              {item.text}
+            </Link>
+          ))}
         </div>
 
         <div className="flex space-x-10">
-          <a href="#">
+          <Link href="https://www.facebook.com/frontendmentor">
             <Image
               src="/icon-facebook.svg"
+              width={20}
+              height={20}
               alt="Facebook"
-              width={30}
-              height={30}
-              className="h-6 ficon"
+              className="ficon"
             />
-          </a>
-          <a href="#">
+          </Link>
+          <Link href="https://twitter.com/frontendmentor">
             <Image
               src="/icon-twitter.svg"
+              width={20}
+              height={20}
               alt="Twitter"
-              width={30}
-              height={30}
-              className="h-6 ficon"
+              className="ficon"
             />
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

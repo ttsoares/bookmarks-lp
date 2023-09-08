@@ -26,7 +26,7 @@ const Features = () => {
   const [tab, setTab] = useState(0);
 
   return (
-    <section className="w-full mt-9">
+    <section className="w-full mt-9" id="features">
       {/* header */}
       <div>
         <div className="px-6 mx-auto mt-[73px]">
@@ -104,19 +104,25 @@ function ATab(index) {
       className="flex flex-col w-full py-5 md:flex-row md:space-x-10"
     >
       <div className="flex justify-center md:w-1/2 lg:ml-9 lg:mr-28">
-        <div className="md:w-[550px] mt-4 mb-3 z-10">
-          <Image src={TABS[index].img} alt="" width={750} height={450} />
+        <div className="w-[86%] md:w-[550px] mt-4 mb-3 animate-fade-right">
+          <Image
+            src={TABS[index].img}
+            alt=""
+            width={750}
+            height={450}
+            className="z-40"
+          />
         </div>
       </div>
 
-      <div className="flex flex-col ml-12 space-y-7 md:w-1/2">
-        <h3 className="text-3xl font-semibold text-center lg:pt-16 md:mt-0 md:text-left">
+      <div className="flex flex-col items-center lg:ml-12 space-y-7 md:w-1/2 animate-fade-down">
+        <h3 className="pt-16 text-2xl font-semibold text-center md:text-3xl lg:pt-16 md:mt-0 md:text-left">
           {TABS[index].title}
         </h3>
-        <p className="max-w-md text-center text-grayishBlue md:text-left">
+        <p className="max-w-md px-1 text-xs leading-6 text-center text-grayishBlue md:text-left">
           {TABS[index].text}
         </p>
-        <div className="mx-auto md:mx-0">
+        <div className="hidden mx-auto md:block md:mx-0">
           <Link href="/moreInfo">
             <p className="px-6 py-3 mt-1 text-sm font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-softBlue hover:border-softBlue hover:border-2">
               More Info

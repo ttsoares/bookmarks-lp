@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export const MENU_LIST = [
-  { text: "Features", href: "/features" },
+  { text: "Features", href: "/#features" },
   { text: "Pricing", href: "/pricing" },
   { text: "Contact", href: "/contact" },
 ];
@@ -22,12 +22,14 @@ const Header = () => {
     <nav className="relative w-full lg:px-[175px] py-6 mx-auto">
       <div className="flex items-center justify-between w-full my-6 ">
         <div className="hidden w-[160px] md:block ">
-          <Image
-            src="/logo-bookmark-reg.svg"
-            width={200}
-            height={80}
-            alt="Logo"
-          />
+          <Link href="/">
+            <Image
+              src="/logo-bookmark-reg.svg"
+              width={200}
+              height={80}
+              alt="Logo"
+            />
+          </Link>
         </div>
         {/* Menu md/lg */}
         <div className="items-center hidden uppercase md:flex">
@@ -97,7 +99,7 @@ const Header = () => {
         </div>
         {/* Mobile */}
         {showMenu && (
-          <div className="fixed inset-0 z-30 flex-col items-center self-end w-full px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase h-fit m-h-screen opacity-90 bg-veryDarkBlue">
+          <div className="fixed inset-0 z-30 flex-col items-center self-end w-full px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase h-fit m-h-screen opacity-90 bg-veryDarkBlue animate-fade-down animate-duration-700">
             {MENU_LIST.map((item, ind) => (
               <div
                 key={ind}

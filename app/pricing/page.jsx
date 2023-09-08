@@ -1,7 +1,7 @@
 const Page = () => {
   return (
     <div className="items-center justify-center w-full h-[170px] flex bg-grayishBlue">
-      <h1 className="text-6xl font-extrabold text-softRed ">More Info</h1>
+      <h1 className="text-6xl font-extrabold text-softRed ">Pricing</h1>
     </div>
   );
 };
