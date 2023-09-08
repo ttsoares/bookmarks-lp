@@ -3,9 +3,9 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <section>
-      <div className="container flex flex-col-reverse p-6 mx-auto lg:flex-row lg:mb-0">
-        <div className="flex flex-col space-y-8 lg:mt-28 lg:w-1/2 lg:ml-12">
-          <h1 className="text-2xl font-semibold text-center lg:text-5xl lg:text-left">
+      <div className="container flex flex-col-reverse mx-auto lg:p-6 lg:flex-row lg:mb-0">
+        <div className="flex flex-col mt-10 space-y-8 lg:mt-28 lg:w-1/2 lg:ml-12">
+          <h1 className="text-3xl font-semibold text-center lg:text-5xl lg:text-left">
             A Simple Bookmark Manager
           </h1>
           <p className="max-w-md mx-auto text-lg text-center text-gray-400 lg:text-lg lg:text-left lg:mt-0 lg:mx-0">
@@ -23,7 +23,7 @@ const Hero = () => {
             </a>
             <a
               href="#"
-              className="p-4 text-sm font-semibold text-gray-500 bg-gray-200 border-2 border-gray-300 rounded shadow-md md:text-xs hover:bg-white hover:text-gray-400 hover:border-gray-800"
+              className="p-4 text-sm font-semibold text-gray-500 border-2 border-gray-300 rounded shadow-md bg-slate-50 md:text-xs hover:bg-white hover:text-gray-400 hover:border-gray-800"
             >
               Get It On Firefox
             </a>
@@ -31,10 +31,12 @@ const Hero = () => {
         </div>
 
         <div className="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
-          {/* blue ribbon */}
+          {/* blue ribbon md/lg*/}
           <div className="hidden lg:block w-[1500px] h-[300px] left-[38%] absolute rounded-l-full top-52 bg-softBlue"></div>
+          {/* blue ribbon sm*/}
+          <div className="lg:hidden w-[500px] h-[210px] left-[20%] absolute rounded-l-full top-14 bg-softBlue"></div>
 
-          <div className="lg:w-[660px] mt-1">
+          <div className="w-full lg:w-[660px] mt-1">
             <Image
               src="/illustration-hero.svg"
               alt=""

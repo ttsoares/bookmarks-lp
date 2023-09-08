@@ -2,25 +2,34 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="py-5 bg-veryDarkBlue w-full">
-      <div className="w-full flex flex-col items-center justify-between mx-auto space-y-16 px-6 md:flex-row md:space-y-0">
+    <footer className="w-full px-8 py-6 bg-veryDarkBlue">
+      <div className="flex flex-col items-center justify-between w-full px-32 mx-auto space-y-16 md:flex-row md:space-y-0">
         <div className="flex flex-col items-center justify-between space-y-8 text-lg font-light md:flex-row md:space-y-0 md:space-x-14 text-grayishBlue">
           <Image
             src="/logo-bookmark-inv.svg"
             alt=""
-            width={200}
+            width={150}
             height={80}
-            className="mb-1"
+            className=""
           />
 
-          <a href="#features" className="uppercase hover:text-softRed">
+          <a
+            href="#features"
+            className="text-sm text-gray-200 uppercase hover:text-softRed"
+          >
             Features
           </a>
-          <a href="#download" className="uppercase hover:text-softRed">
-            Download
+          <a
+            href="#download"
+            className="text-sm text-gray-200 uppercase hover:text-softRed"
+          >
+            Pricing
           </a>
-          <a href="#faq" className="uppercase hover:text-softRed">
-            FAQ
+          <a
+            href="#faq"
+            className="text-sm text-gray-200 uppercase hover:text-softRed"
+          >
+            Contact
           </a>
         </div>
 

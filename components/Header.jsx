@@ -20,8 +20,8 @@ const Header = () => {
 
   return (
     <nav className="relative w-full lg:px-[175px] py-6 mx-auto">
-      <div className="flex items-center justify-between w-full my-6">
-        <div className="hidden w-[150px] md:block">
+      <div className="flex items-center justify-between w-full my-6 ">
+        <div className="hidden w-[160px] md:block ">
           <Image
             src="/logo-bookmark-reg.svg"
             width={200}
@@ -30,26 +30,28 @@ const Header = () => {
           />
         </div>
         {/* Menu md/lg */}
-        <div className="items-center hidden space-x-8 uppercase text-grayishBlue md:flex">
+        <div className="items-center hidden uppercase md:flex">
           {MENU_LIST.map((item, ind) => (
             <Link
               key={ind}
               href={item.href}
-              className="p-2 text-xs hover:text-softRed"
+              className="px-6 text-xs text-gray-500 hover:text-softRed "
             >
               {item.text}
             </Link>
           ))}
 
-          <Link
-            href="/login"
-            className="px-8 py-3 text-xs text-white border-2 rounded-md shadow-md bg-softRed border-softRed hover:text-softRed hover:bg-white"
-          >
-            Login
-          </Link>
+          <div className="ml-5">
+            <Link
+              href="/login"
+              className="px-8 py-2.5 text-xs text-white border-2 rounded-md shadow-md bg-softRed border-softRed hover:text-softRed hover:bg-white"
+            >
+              Login
+            </Link>
+          </div>
         </div>
         {/* Burger  */}
-        <div className="flex justify-between w-full md:hidden">
+        <div className="flex justify-between w-full px-10 md:hidden">
           {!showMenu && (
             <div className="z-20 block md:hidden">
               <Image

@@ -16,21 +16,21 @@ const News = () => {
   }
 
   return (
-    <section className="bg-softBlue w-full">
-      <div className="max-w-lg mx-auto py-24">
-        <p className="mb-6 text-xs tracking-widest text-center text-white uppercase">
+    <section className="w-full pt-10 bg-softBlue lg:pb-14">
+      <div className="max-w-lg mx-auto">
+        <p className="pt-8 mb-10 text-xs tracking-widest text-center text-white uppercase">
           35,000+ Already Joined
         </p>
-        <h2 className="px-3 mb-6 text-3xl font-semibold text-center text-white md:text-4xl">
+        <h2 className="mb-6 text-2xl font-semibold text-center text-white px-7 md:text-3xl">
           Stay up-to-date with what we&apos;re doing
         </h2>
 
         <form
           onSubmit={handleSubmit(submition)}
           noValidate
-          className="flex flex-col items-start justify-center max-w-6xl mx-auto space-y-6 text-base px-6 md:flex-row md:space-y-0 md:space-x-4 md:px-0"
+          className="flex flex-col items-start justify-center max-w-6xl px-6 mx-auto space-y-6 text-base md:flex-row md:space-y-0 md:space-x-4 md:px-0"
         >
-          <div className="flex flex-col justify-between items-start  mx-auto md:flex-row md:mx-0">
+          <div className="flex flex-col items-start justify-between mx-auto md:flex-row md:mx-0">
             <div
               className={`h-20 relative ${
                 errors.email?.message
@@ -47,10 +47,10 @@ const News = () => {
                   },
                 })}
                 type="text"
-                className="flex-1 px-6 pt-3 pb-2 mb-4 rounded-md border-1 border-white focus:outline-none md:mb-0 w-72"
+                className="flex-1 px-6 pt-3 pb-2 mt-3 mb-4 border-white rounded-md border-1 focus:outline-none md:mb-0 w-72"
                 placeholder="Enter your email address"
               />
-              <p className="font-semibold mt-2 ml-2 text-xs bg-softRed text-white italic">
+              <p className="mt-2 ml-2 text-xs italic font-semibold text-white bg-softRed">
                 {errors.email?.message}
               </p>
 
@@ -74,7 +74,7 @@ const News = () => {
 
             <input
               type="submit"
-              className="inline-flex ml-6 px-6 py-3 font-semibold text-center text-white duration-200 transform rounded-md cursor-pointer focus:outline-none bg-softRed hover:bg-white hover:text-softRed"
+              className="inline-flex px-6 py-3 mt-3 ml-6 text-sm font-semibold text-center text-white duration-200 transform rounded-md cursor-pointer focus:outline-none bg-softRed hover:bg-white hover:text-softRed"
               value="Contact Us"
             />
           </div>

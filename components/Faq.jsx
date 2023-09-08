@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const FAQs = [
   {
     title: "What is BookMark?",
@@ -19,14 +21,14 @@ const FAQs = [
 
 const Faq = () => {
   return (
-    <section className="lg:mt-28">
+    <section className="lg:mt-[100px] lg:mb-6">
       {/* header */}
-      <div>
+      <div className="pb-4">
         <div className="container mx-auto">
-          <h2 className="mb-6 text-3xl font-semibold text-center md:text-3xl">
+          <h2 className="mb-6 text-3xl font-semibold text-center text-veryDarkBlue md:text-3xl">
             Frequently Asked Questions
           </h2>
-          <p className="max-w-lg px-1 mx-auto text-center text-grayishBlue">
+          <p className="max-w-lg px-1 mx-auto text-center text-gray-400">
             Here are some of our FAQs. If you have any other questions
             you&apos;d like answered please feel free to email us.
           </p>
@@ -34,19 +36,19 @@ const Faq = () => {
       </div>
       {/* FAQs */}
       <div>
-        <div className="container px-6 mx-auto mb-32">
-          <div className="max-w-2xl m-8 mx-auto ">
+        <div className="container flex flex-col items-center px-6 mx-auto mb-32">
+          <div className="w-full m-8 mx-auto md:w-[46%] ">
             {FAQs.map((faq, index) => (
               <div
-                className="py-1 border-b outline-none group"
+                className="py-1 mt-3 border-b outline-none group first:border-t"
                 key={index}
                 tabIndex={String(index)}
               >
                 <div className="flex items-center justify-between py-3 text-gray-500 transition duration-500 ease-in cursor-pointer group">
-                  <div className="transition duration-500 ease-in group-hover:text-red-500">
+                  <div className="transition duration-500 ease-in group-hover:text-red-500 text-veryDarkBlue">
                     {faq.title}
                   </div>
-                  <div className="transition duration-500 ease-in group-focus:rotate-180 group-focus:text-red-500">
+                  <div className="mr-8 transition duration-500 ease-in text-softBlue group-focus:rotate-180 group-focus:text-red-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="18"
@@ -66,6 +68,13 @@ const Faq = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="mx-auto md:mx-0">
+            <Link href="/moreInfo">
+              <p className="px-6 py-3 mt-1 text-sm font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-softBlue hover:border-softBlue hover:border-2">
+                More Info
+              </p>
+            </Link>
           </div>
         </div>
       </div>
